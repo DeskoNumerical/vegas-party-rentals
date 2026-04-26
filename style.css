@@ -74,8 +74,7 @@ header {
 
 /* --- HERO SECTION --- */
 .hero {
-    /* UPDATED TO LOCAL IMAGE (Using chairs.jpg as a placeholder for your background) */
-    background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('images/chairs.jpg') center/cover;
+    background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('images/chairs.png') center/cover;
     color: white;
     text-align: center;
     padding: 120px 20px;
@@ -127,8 +126,13 @@ header {
 
 .card img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 250px; /* Increased height slightly to handle taller images better */
+    object-fit: cover; /* This prevents stretching by cropping the edges instead */
+}
+
+/* Special fix for the heater if it is being cut off oddly */
+.img-heater {
+    object-position: center; /* Shows the middle of the image */
 }
 
 .card h3 {
